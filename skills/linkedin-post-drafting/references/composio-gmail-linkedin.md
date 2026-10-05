@@ -22,7 +22,7 @@ This Composio account is the working path for the mailbox; do not depend on the 
 
 ## The `[Validation]` source email
 
-Received at `clement@celdel.com`, sent by `clement.t.zurcher@gmail.com` — usually a forward of a message from the publisher (`celine@celdel.com`). Body structure:
+Received at `<boite-de-reception@exemple.com>`, sent by `<adresse-de-l-expediteur@exemple.com>` — usually a forward of a message from the publisher (`<adresse-du-redacteur@exemple.com>`). Body structure:
 
 ```
 Subject: Fwd: [Validation] <title>

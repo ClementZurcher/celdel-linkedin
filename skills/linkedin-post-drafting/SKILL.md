@@ -18,7 +18,7 @@ Prepare LinkedIn publications as ready-to-review drafts. The user posts himself;
 
 - The user asks for a LinkedIn post, draft, or publication for Celdel AI.
 - An idea, note, link, or email must be turned into a publication.
-- The weekly source-email review runs (mails from `clement.t.zurcher@gmail.com` to `clement@celdel.com`).
+- The weekly source-email review runs (mails from `<adresse-de-l-expediteur@exemple.com>` to `<boite-de-reception@exemple.com>`).
 - Anything touching the LinkedIn integration, the draft folder, or the visual for a publication.
 
 ## Hard rules (apply to every instance)
@@ -35,7 +35,7 @@ Prepare LinkedIn publications as ready-to-review drafts. The user posts himself;
 1. **Identify** the objective, audience, point of view, and desired call to action. Missing but non-blocking → state a short assumption; if it would change the message, ask.
 2. **Get the source material.** Two entry points:
    - User-supplied notes / links / idea (in chat).
-   - The weekly email source: mails sent by `clement.t.zurcher@gmail.com` to `clement@celdel.com`. Read them via the Composio CLI — commands and the email structure are in `references/composio-gmail-linkedin.md`.
+   - The weekly email source: mails sent by `<adresse-de-l-expediteur@exemple.com>` to `<boite-de-reception@exemple.com>`. Read them via the Composio CLI — commands and the email structure are in `references/composio-gmail-linkedin.md`.
 3. **Extract the post text.** In the `[Validation]` emails the publisher's text sits under a `Post :` heading; the `article` and `Sources` list are separate sections. Take the `Post :` section as the publication text.
 4. **Draft** to the deliverable shape above.
 5. **Visual.** Prefer a free path when no paid provider works: run `scripts/generer_visuel.py` (Pollinations, no key). The option table, the endpoint variants and the throttling behaviour are in `references/image-generation.md`. Generate via a configured provider ONLY if a real test generation succeeds — a configured provider can still be refused by the account's billing (402/429). Otherwise describe the visual precisely, or render a designed title/quote card locally with Pillow (recipe in `references/composio-gmail-linkedin.md`). Never propose Gemini for images: Hermes ships no Gemini image connector and Gemini's image API has no free tier.

@@ -4,7 +4,7 @@ Use the Composio CLI from the terminal. It is installed at `~/.composio/composio
 
 ## Discover what is connected
 
-`composio connections list` prints each toolkit with its `word_id` (e.g. `gmail_soam-mealy`) and status. Use only accounts whose status is `ACTIVE`; ignore `FAILED` ones.
+`composio connections list` prints each toolkit with its `word_id` (e.g. `gmail_exemple-aaaaa`) and status. Use only accounts whose status is `ACTIVE`; ignore `FAILED` ones.
 
 ## Read Gmail
 
