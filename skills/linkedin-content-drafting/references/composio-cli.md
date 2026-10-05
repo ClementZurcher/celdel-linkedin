@@ -1,4 +1,4 @@
-# Composio CLI — reading sources, discovering accounts and tools
+# Composio CLI : reading sources, discovering accounts and tools
 
 Use the Composio CLI from the terminal. It is installed at `~/.composio/composio` in this environment and is the configured read path for Gmail here.
 
@@ -13,9 +13,9 @@ composio execute GMAIL_FETCH_EMAILS --account <word_id> -d '{"query":"newer_than
 ```
 
 - `query` accepts Gmail search syntax: `newer_than:7d`, `from:`, `subject:`, `label:`, `is:unread`, ...
-- `ids_only:true` returns message ids only (fast, no bodies) — use it for an access check / counting.
+- `ids_only:true` returns message ids only (fast, no bodies), use it for an access check / counting.
 - `verbose:false` drops bodies; `verbose:true` is required for body + attachments.
-- Paginate with the returned `page_token` until it is empty. `resultSizeEstimate` is approximate — trust `page_token`, not counts.
+- Paginate with the returned `page_token` until it is empty. `resultSizeEstimate` is approximate, trust `page_token`, not counts.
 
 ## Inspect a tool's input schema
 
@@ -33,5 +33,5 @@ composio execute GMAIL_FETCH_EMAILS --account <word_id> -d '{"query":"newer_than
 
 ## Access notes
 
-- If the obvious IMAP credentials fail, check `composio connections list` for an ACTIVE Gmail connection before concluding email is unreadable — an already-configured connection is the working path.
+- If the obvious IMAP credentials fail, check `composio connections list` for an ACTIVE Gmail connection before concluding email is unreadable, an already-configured connection is the working path.
 - LinkedIn: `LINKEDIN_CREATE_LINKED_IN_POST` publishes only (no draft state). Confirm with `--get-schema` before relying on it.

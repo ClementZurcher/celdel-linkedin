@@ -1,10 +1,10 @@
-# Skills tiers — à vérifier avant toute diffusion
+# Skills tiers : à vérifier avant toute diffusion
 
 Ces skills ne sont pas écrits par Celdel AI. Les rediffuser publiquement peut poser un problème de licence : à trancher avant publication.
 
 | Skill | Origine |
 |---|---|
-| `linkedin-automation-enhanced` | skill publié sur un registre — `_meta.json` : owner `kn77t2c485xyqb5jkx5npmp73982svq2`, v1.0.0 |
+| `linkedin-automation-enhanced` | skill publié sur un registre, `_meta.json` : owner `kn77t2c485xyqb5jkx5npmp73982svq2`, v1.0.0 |
 
 ## Ce qui a été vérifié
 

@@ -1,13 +1,13 @@
 # Generating the post visual (Celdel AI `linkedin` profile)
 
 Goal: attach a visual to each drafted post. Never promise an image before a real test
-generation returned a file — "toolset enabled" and "provider configured" are both
+generation returned a file, "toolset enabled" and "provider configured" are both
 weaker signals than one successful run.
 
 ## What Hermes can actually drive
 
 Hermes ships image-gen providers for: `fal`, `openai`, `openai-codex`, `openrouter`,
-`xai`, `deepinfra`, `krea`, `meta-ai`. **There is no Gemini/Google image-gen connector** —
+`xai`, `deepinfra`, `krea`, `meta-ai`. **There is no Gemini/Google image-gen connector**, 
 a Gemini/`GOOGLE_API_KEY` cannot be plugged into the image tool. Gemini's free image
 generation is *app-only* (gemini.google.com) and the current Gemini image **API** models
 are not on a free tier, so Gemini is never the free route here. Check the installed
@@ -47,7 +47,7 @@ https://image.pollinations.ai/prompt/{p}?width=1200&height=627
 - Use the `image.pollinations.ai/prompt/` host for keyless use. The `gen.pollinations.ai`
   host answers **401** without a key.
 - `scripts/generer_visuel.py` implements the variant fallback, the Pillow re-crop, and
-  reads `POLLINATIONS_API_KEY` from the environment when present — run it instead of
+  reads `POLLINATIONS_API_KEY` from the environment when present, run it instead of
   hand-writing curl calls.
 
 ## No-network / no-provider fallback

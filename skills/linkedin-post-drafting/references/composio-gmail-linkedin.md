@@ -2,7 +2,7 @@
 
 ## Reading the source mailbox
 
-The Composio CLI is a self-contained binary — no agent loop needed:
+The Composio CLI is a self-contained binary, no agent loop needed:
 
 ```bash
 COMPOSIO=/root/.composio/composio
@@ -15,14 +15,14 @@ $COMPOSIO execute GMAIL_FETCH_EMAILS --account <gmail_account> \
 - `-d` takes JSON or a JS-style object literal; `{}` is fine for schema-only tools.
 - `--get-schema` prints a tool's input schema; `--dry-run` validates before executing.
 - Paginate with `page_token` until `nextPageToken` is empty.
-- Watch for `storedInFile: true` + `outputFilePath`: large replies are written to a JSON file — read that file. Inside, `data.messages[0]` holds `subject` / `sender` / `messageText` / `payload`.
+- Watch for `storedInFile: true` + `outputFilePath`: large replies are written to a JSON file, read that file. Inside, `data.messages[0]` holds `subject` / `sender` / `messageText` / `payload`.
 - The body is base64 in `payload.parts[...].body.data`; the `messageText` field is a convenient decoded shortcut.
 
 This Composio account is the working path for the mailbox; do not depend on the profile's raw `EMAIL_*` IMAP vars.
 
 ## The `[Validation]` source email
 
-Received at `<boite-de-reception@exemple.com>`, sent by `<adresse-de-l-expediteur@exemple.com>` — usually a forward of a message from the publisher (`<adresse-du-redacteur@exemple.com>`). Body structure:
+Received at `<boite-de-reception@exemple.com>`, sent by `<adresse-de-l-expediteur@exemple.com>`, usually a forward of a message from the publisher (`<adresse-du-redacteur@exemple.com>`). Body structure:
 
 ```
 Subject: Fwd: [Validation] <title>
@@ -45,10 +45,10 @@ Extract the `Post :` section as the publication text; keep `Sources` for the "fa
 
 ## LinkedIn tool set (Composio)
 
-- `LINKEDIN_CREATE_LINKED_IN_POST` — publishes (needs `author` URN + `commentary`, optional `images`). No draft state.
+- `LINKEDIN_CREATE_LINKED_IN_POST`, publishes (needs `author` URN + `commentary`, optional `images`). No draft state.
   - **Validation gate:** prove the mechanics without publishing by adding `--dry-run` (`execute LINKEDIN_CREATE_LINKED_IN_POST --dry-run -d '{...}'` → `dryRun: true`). Only a real call publishes, as whichever account is connected.
-- `LINKEDIN_GET_MY_INFO` — the connected identity; resolve `urn:li:person:<id>` from it. Use it to confirm WHOSE profile will publish.
-- `LINKEDIN_GET_COMPANY_INFO` — organization URNs (needs admin scope).
+- `LINKEDIN_GET_MY_INFO`, the connected identity; resolve `urn:li:person:<id>` from it. Use it to confirm WHOSE profile will publish.
+- `LINKEDIN_GET_COMPANY_INFO`, organization URNs (needs admin scope).
 - `LINKEDIN_REGISTER_IMAGE_UPLOAD`, `LINKEDIN_GET_POST_CONTENT`, `LINKEDIN_DELETE_POST`, `LINKEDIN_CREATE_ARTICLE_OR_URL_SHARE`.
 
 ## Enabling an image generator for the profile
@@ -70,7 +70,7 @@ hermes -p <profile> config set OPENROUTER_API_KEY <clé>   # routes to the profi
 hermes -p <profile> config get image_gen.provider
 ```
 
-Give the user these commands — never type a key on their behalf.
+Give the user these commands, never type a key on their behalf.
 
 - **A configured provider can still be blocked by the account's billing** (HTTP 402 from OpenRouter, 429 from OpenAI "no credits remaining"). Run one real test generation before promising an image; if it fails, use the local fallback.
 

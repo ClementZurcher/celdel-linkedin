@@ -1,4 +1,4 @@
-# Skills Hermès — LinkedIn (Celdel AI)
+# Skills Hermès : LinkedIn (Celdel AI)
 
 Rédiger des publications LinkedIn : brouillons, accroches, visuels, vérification avant publication.
 
